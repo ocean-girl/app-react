@@ -1,0 +1,19 @@
+ const[cart, setCart] = useState([]);
+
+    const agregarAlCarrito = ( item ) => {
+        
+        setCart( [...cart, item] )
+
+    };
+
+    const deleteById = ( id) => {
+        let newArray = cart.filter( (product) => product.id !== id)
+        setCart( newArray )
+    };
+
+    let data = {
+        cart, //cuando la clave es la misma que el valor puedo poner solo cart en lugar de cart: cart
+        agregarAlCarrito,
+        deleteById,
+        
+    };
