@@ -2,14 +2,19 @@
 
     const agregarAlCarrito = ( item ) => {
         
-        setCart( [...cart, item] )
+        setCart( [...cart, item] )  //espací todo lo que hay y además el nuevo elemento (item)
+        //para hacer un agregado a una variable, 
+        // en react no se puede usar push, 
+        //se setea el valor al estado mediante su función set, 
+        //utilizando el spread operator.
 
     };
 
-    const deleteById = ( id) => {
-        let newArray = cart.filter( (product) => product.id !== id)
-        setCart( newArray )
-    };
+    const deleteById = ( id) => { // siempre se usa el filter para eliminar en react
+        //console.log("el id del producto a eliminar es: ", id) primero se hace este console para ver si funciona
+        let newArray = cart.filter( (product) => product.id !== id) // si el elemento del cart coincide con el id pasado por parámetro, entonces no lo dejes pasar
+        setCart( newArray ) //setea el carrito con este nuevo arreglo  
+    };                                          //si el id es distinto dejalo pasar, si no es distinto que no pase
 
     let data = {
         cart, //cuando la clave es la misma que el valor puedo poner solo cart en lugar de cart: cart

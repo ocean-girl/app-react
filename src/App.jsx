@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from './routes/routes';
 import CartContextProvider from "./context/CartContext";
-import Login from "./components/pages/login/Login";
 import Layout from "./components/layout/Layout";
 import NotFound from "./components/pages/404NotFound/404NotFound";
+import LoginFormik from "./components/pages/Login/LoginFormik";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
                 <Route path={path} key={id} element={<Element />} />
             ))}
           </Route>    
-          <Route path="/login" element={<Login />} />
+          <Route path="/LoginFormik" element={<LoginFormik />} />
           <Route path="*" element={<NotFound />} />
         
         </Routes>

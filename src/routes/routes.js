@@ -2,6 +2,7 @@ import Home from "../components/pages/home/Home";
 import Login from "../components/pages/login/Login";
 import ProductsList from "../components/pages/productsList/ProductsList";
 import Cart from "../components/pages/Cart/Cart";
+import LoginFormik from "../components/pages/Login/LoginFormik";
 
 
 export const routes = [ 
@@ -12,8 +13,13 @@ export const routes = [
   },
   {
     id: "login",
-    path: "/login",
+    path: "/Login",
     Element: Login,
+  },
+  {
+    id: "loginFormik",
+    path: "/LoginFormik",
+    Element: LoginFormik,
   },
   {
     id: "productList",

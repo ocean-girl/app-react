@@ -23,10 +23,10 @@ const cartReducer = ( state, action ) => { // action, es la action que me manda 
 
 const CartContectProvider = ({children}) => {
 
-   const [ state , dispatch ] = useReducer(cartReducer, initialState) //este inicitial hace referencia al state
+   const [ state , dispatch ] = useReducer(cartReducer, initialState) //este initial hace referencia al state
 
 
-    let data = {
+    let data =  {
         state,
         dispatch,
         cart: state.cart
