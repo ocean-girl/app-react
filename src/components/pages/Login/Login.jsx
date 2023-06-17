@@ -33,8 +33,7 @@ const Login = () => {
     <div>
       <h1>Login</h1>
       <Link to="/">Volver al home</Link>
-      </div>
-      <div>
+      
         <form onSubmit={enviarForm}>
           <input type="text" placeholder="Email" name="email" onChange={capturarInputEmail} />
           <input type="text" placeholder="Password" name="password" />
